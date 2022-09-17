@@ -6,9 +6,17 @@ E
     output: 5
 D
     -Arrays
-A
-    -Declare a new Map()
-
+A   -Set Solution
+    -Declare a variable "Found" initialized with a new Map()
+    -initialize a variable for starting index
+    -initialize a variable that will contain max Lengt of substring;
+    -Loop through the given input
+    -check if the current map has a character s[i]
+    -if the current mad has a character
+    -The starting index will equal the the greater value using math.max
+    -replace the set with the current value
+    -maxLength will equal the current value minus the value afrwer the starting value or max length
+    -return max length
 C
 */
 
@@ -31,4 +39,4 @@ const lengthOfLongestSubstring = function(s) {
     return maxLength;  
 };
 
-console.log(lengthOfLongestSubstring("abcabcbb"))
+// console.log(lengthOfLongestSubstring("abcabcbb"))
