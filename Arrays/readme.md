@@ -19,6 +19,7 @@
 ## Array Time Complexity
 
 | Name | Runtime |Type|
+ --- | ---| --- |
 |Access|O(1)|Constant|
 | Search  | O(n) |Linear|
 | Search(sorted) | O(log(n))|Logarithmic|
