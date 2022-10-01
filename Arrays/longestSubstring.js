@@ -20,7 +20,7 @@ A   -Set Solution
 C
 */
 
-const lengthOfLongestSubstring = function(s) {
+const lengthOfLongestSubstring = (s) => {
     const found = new Map();
     let start = 0;
     // keeps track of the starting index of the current substring.
@@ -32,6 +32,7 @@ const lengthOfLongestSubstring = function(s) {
         // max prevents moving backward, 'start' can only move forward
         if(found.has(s[i])) start = Math.max(found.get(s[i]) + 1, start)
         found.set(s[i], i);
+        console.log(found)
         // maximum of the current substring length and maxLen
         maxLength = Math.max(i - start + 1, maxLength);
     } 
@@ -39,4 +40,5 @@ const lengthOfLongestSubstring = function(s) {
     return maxLength;  
 };
 
-// console.log(lengthOfLongestSubstring("abcabcbb"))
+console.log(lengthOfLongestSubstring("abcabcbb"))
+
