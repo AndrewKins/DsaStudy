@@ -1,2 +1,2 @@
 # DsaStudy
-All of my study materials for DSA being pushed from local
+**All of my study materials consisting of DSA & Grind75 Solutions**

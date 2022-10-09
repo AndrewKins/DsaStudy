@@ -14,10 +14,22 @@ E
 D
     -Arrays
 A
+    -Initialize a node
+    -Find a way to loop through the given nodes
+    -May have to be sorted 
+    -
+
     
 C
 */
 
 var mergeTwoLists = function(list1, list2) {
-    
-};
+    if(!list1|| !list2) return list1|| list2
+    if(list1.val < list2.val){
+        list1.next = mergeTwoLists(list1.next, list2)
+        return list1
+    }
+    list2.next = mergeTwoLists(list1, list2.next)
+    return list2
+}
+console.log(mergeTwoLists([1,2,4],[[1,3,4]]))
