@@ -1,6 +1,6 @@
-#Linked Lists
+# Linked Lists
 
-##Types of LinkedLists
+## Types of LinkedLists
 **Singly**
     -Each node points to the next node 
         -Last node points to null
