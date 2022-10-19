@@ -6,6 +6,7 @@
 
  - Each node points to the next node 
         - Last node points to null
+
 **Doubly**
 
 - Each node has two pointers
@@ -15,6 +16,7 @@
             - which points to the previous node. 
     The prev pointer of the first node and 
     the next pointer of the last node point to null.
+
 **Circular**
 
  - A singly linked list where the last node points back to the first node. 
