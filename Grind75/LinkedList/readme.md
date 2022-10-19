@@ -2,8 +2,7 @@
 
 ## Types of LinkedLists
 
-**Singly**
-    - Each node points to the next node 
+**Singly** - Each node points to the next node 
         - Last node points to null
 **Doubly**
     - Each node has two pointers
