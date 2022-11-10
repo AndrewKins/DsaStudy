@@ -166,6 +166,7 @@ c: total number of courses being offered (note: The number of courses any studen
 const idC = (array) => {
     let obj = {}
     for (let i = 0; i < array.length; i++) {
+        console.log(array[i][0],'test')
         if (obj[array[i][1]]) {
             obj[array[i][1]].push(array[i][0])
         } else {
@@ -175,7 +176,9 @@ const idC = (array) => {
     // console.log(obj)
     let obj2 = {}
     for (key in obj) {
+      console.log(key,'test')
         if (obj[key].length > 1) {
+            console.log(obj[key], 'testinggg')
             obj2[obj[key].join(', ')] = [key]
         }
     }
