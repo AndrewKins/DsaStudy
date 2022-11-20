@@ -24,8 +24,9 @@ const twoSum = (nums, target) => {
     let hashMap = {}
     for(ele in nums){
         let matchingPairs = target - nums[ele]; //9 - 2
-        console.log(matchingPairs)
+        console.log(matchingPairs, 'testingggggggg')
         if(hashMap[matchingPairs]){ //hashmap contains remainder above
+            console.log(hashMap[matchingPairs], 'testingggg')
             return [hashMap[matchingPairs], ele] //return number and index
         } else
         hashMap[nums[ele]] = ele
