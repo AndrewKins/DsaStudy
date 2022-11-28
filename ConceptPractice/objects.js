@@ -7,7 +7,7 @@
 //Objects can be initialized in 3 ways
 
 //let obj = {}
-//const models = new Obj
+//const models = new Obj()
 
 //Access properties of an Obj
 
@@ -19,20 +19,68 @@
     //myObj.keyname
     //can only use if key is character is a value
 
-const user = {
-    realname: 'andrew',
-    age: '25',
-    techstack: ['javascript','react','express','node']
-}
-// console.log(user)
-// console.log(user['age']) //use brackets with strings to target value of the key
-// console.log(user.techstack[1])
-// console.log(user.techstack.length)
-// console.log(user['techstack'][1])
+// const user = {
+//     realname: 'andrew',
+//     age: '25',
+//     techstack: ['javascript','react','express','node']
+// }
+// // console.log(user)
+// // console.log(user['age']) //use brackets with strings to target value of the key
+// // console.log(user.techstack[1])
+// // console.log(user.techstack.length)
+// // console.log(user['techstack'][1])
 
-for(let ele in user){
-    // console.log(ele, 'testingg') //ele are the keys of the object
-    // console.log(user[ele], 'what is this') //bracket notation targets values of the keys
-    // console.log(user[ele], ele)
-    console.log(user.ele)
-} 
+// for(let ele in user){
+//     // console.log(ele, 'testingg') //ele are the keys of the object
+//     // console.log(user[ele], 'what is this') //bracket notation targets values of the keys
+//     // console.log(user[ele], ele)
+//     console.log(user.ele)
+// } 
+
+
+// const objTest = (arr) => {
+//     let hashMap = {}
+//     for(let i = 0; i < arr.length; i += 1){
+//         if(!hashMap[arr[i]]){
+//             hashMap[arr[i]] = 1
+//         }else
+//             hashMap[arr[i]]++
+//             occurences.push(hashMap[arr])
+//             // console.log(hashMap, 'testing')
+//     }
+//     console.log(hashMap)
+// }
+
+
+
+// console.log(objTest([1,2,5,5,7,3,9,10,1]))
+ 
+let cat = {
+    name: "Mary",
+    age: 2,
+    color: "black",
+    mischievous: true
+ }
+
+ let catBreed = {
+    breed: "Scottish Fold"
+  }
+
+  //combine two objects together
+  let combinedCatInfo = Object.assign(cat,catBreed)
+  console.log(combinedCatInfo)
+
+
+
+const anotherObj = (newObj) => {
+    const catValues = Object.values(newObj) //returns all values from an object
+
+    // const catValues = Object.keys(newObj)//returns all keys from an Object
+
+    let allCats = Object.entries(newObj) //returns an array of key/value pairs
+    console.log(catValues)
+    console.log(allCats)
+
+
+}
+console.log(anotherObj(cat))

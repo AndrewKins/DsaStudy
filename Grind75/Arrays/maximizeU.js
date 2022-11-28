@@ -36,33 +36,49 @@ int/n]: the elements of arr rearranged as described
 
 
 const maximizeU = (arr) => {
-    let removedEle;
-    let splicedArr;
-    let minimumNum;
-    const newArray = []
-    while(arr.length - 1){
-    removedEle = Math.max(...arr) //obtain the maximum element in (Arr)
-    splicedArr = arr.splice(arr.indexOf(removedEle),1) // remove the element from the arr using the index
-    newArray.push(splicedArr[0]) //push the removed element into the newArray
-    minimumNum = Math.min(...arr)
-    splicedArr = arr.splice(arr.indexOf(minimumNum), 1)
-    newArray.push(splicedArr[0])
-    console.log(newArray)
+    const newArr = arr.sort((a,b) => a-b)
+    let n = newArr.length
+    let outPut = []
+    let roundUp = newArr[Math.ceil(n / 2 - 1)]
+    let roundDown = newArr[Math.ceil(n / 2)]
+   outPut.push(roundUp,roundDown)
+   console.log(outPut,'testing')
+
+    // let j = arrLength % 2 === 0 ? (arrLength - 1) / 2 : arrLength / 2
+    // console.log(newArr[j])
+    //     outPut.push(newArr[Math.ceil(j++)])
+    //     outPut.push(j++)
+    //         for(let i = 2; i < arrLength; i += 1){
+    //             console.log(newArr[i], 'test')
+    //             if(i % 2 === 0){
+    //                 outPut.push(newArr[Math.ceil(count++)])
+    //             } else
+    //                 outPut.push(newArr[Math.ceil(j++)])
+    //         }
+    //         return outPut
+
+
+
+    outPut.push(newArr[Math.ceil(newArr.length/2 - 1)])
+    outPut.push(newArr[Math.ceil (newArr.length/2)])
+    newArr.splice (Math.ceil (newArr.length/2 - 1))
+    let middlePointer = Math.ceil(newArr.length/2)
+    console.log(middlePointer)
+    for (let i = 0; i < newArr.length/2; i++){
+    if(i === middlePointer){
+        outPut.push(newArr[i])
+        break
     }
-     //store the largest 2 numbers
-    // removedEle = Math.max(...arr)
-    // splicedArr = arr.splice(arr.indexOf(removedEle),1)
-    // newArray.push(splicedArr[0])
-    // minimumNum = Math.min(...arr)
-    // splicedArr = arr.splice(arr.indexOf(minimumNum), 1)
-    // newArray.push(splicedArr[0])
-    // removedEle = Math.max(...arr)
-    // splicedArr = arr.splice(arr.indexOf(removedEle),1)
-    // newArray.push(splicedArr[0])
-    // minimumNum = Math.min(...arr)
-    // splicedArr = arr.splice(arr.indexOf(minimumNum), 1)
-    // newArray.push(splicedArr[0])
-    // console.log(newArray)
+    outPut.push(newArr[i])
+    outPut.push(newArr[middlePointer])
+    middlePointer++
 }
+return outPut
+}
+
+    
+
+    
+    
 console.log(maximizeU([9,21,5,34,7]))
 // console.log(maximizeU([[21,9,7,34,5]]))
