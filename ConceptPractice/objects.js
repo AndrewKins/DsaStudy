@@ -68,19 +68,36 @@ let cat = {
 
   //combine two objects together
   let combinedCatInfo = Object.assign(cat,catBreed)
-  console.log(combinedCatInfo)
 
 
 
-const anotherObj = (newObj) => {
-    const catValues = Object.values(newObj) //returns all values from an object
+// const anotherObj = (newObj) => {
+//     const catValues = Object.values(newObj) //returns all values from an object
 
-    // const catValues = Object.keys(newObj)//returns all keys from an Object
+//     // const catValues = Object.keys(newObj)//returns all keys from an Object
 
-    let allCats = Object.entries(newObj) //returns an array of key/value pairs
-    console.log(catValues)
-    console.log(allCats)
+//     let allCats = Object.entries(newObj) //returns an array of key/value pairs
+//     console.log(catValues)
+//     console.log(allCats)
 
 
-}
-console.log(anotherObj(cat))
+// }
+// console.log(anotherObj(cat))
+
+
+for (let key in cat) {
+    if (cat.hasOwnProperty(key)) {
+       console.log(key, cat[key]);
+    }
+ }
+
+ console.log(cat.hasOwnProperty(), 'testinggg')
+ 
+ 
+//  let keys = Object.keys(yourobject);
+ 
+ 
+//   let keys = [];
+//   for (let key in yourobject) {      
+//       if (yourobject.hasOwnProperty(key)) keys.push(key);
+//   }
