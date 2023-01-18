@@ -15,6 +15,7 @@ const sortedSquares = (nums) => {
         }
     }
     return result;
+    //add more explanation
 };
 
 console.log(sortedSquares([-4,-1,0,3,10]))
